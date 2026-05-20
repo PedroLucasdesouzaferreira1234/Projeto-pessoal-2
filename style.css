@@ -1,0 +1,561 @@
+/* Reset e estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f8f9fa;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #000000 0%, #2d2d2d 100%);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.header-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.subtitle {
+    font-style: italic;
+    color: #ccc;
+    font-size: 1.1rem;
+}
+
+/* Navegação */
+nav {
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    border-bottom: 2px solid #ffd700;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: white;
+    color: #000;
+}
+
+/* Hero Banner */
+.hero-banner {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('https://imgs.search.brave.com/31nz62m3lY4RfXIHFEkw0h1cXvDhnWob4_e60446rI4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZXRy/b3ZvaWNlLm5ldC93/cC1jb250ZW50L3Vw/bG9hZHMvd3BfMjEy/L3dhbGxwYXBlcl8w/MjI2OTYzLTEwMjR4/NTc2LW9wdGltaXpl/ZC5qcGc') center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.stat {
+    text-align: center;
+}
+
+.number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+.label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Container Principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Seções */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: #2d2d2d;
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Filtros */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.5rem;
+    border: 2px solid #000;
+    background: white;
+    color: #000;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #000;
+    color: white;
+}
+
+/* Grid de Cartas */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.card-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.card-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    border-color: red;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+.card-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card-item:hover .card-image img {
+    transform: scale(1.2);
+}
+
+.card-category {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+.card-category.rara {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+}
+
+.card-category.classica {
+    background: linear-gradient(135deg, #4834d4, #686de0);
+}
+
+.card-category.promocional {
+    background: linear-gradient(135deg, #f0932b, #f9ca24);
+}
+
+.card-category.autografada {
+    background: linear-gradient(135deg, #6ab04c, #badc58);
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #2d2d2d;
+}
+
+.card-description {
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.card-rarity {
+    font-size: 1.1rem;
+}
+
+.card-value {
+    font-weight: bold;
+    color: #27ae60;
+}
+
+/* Seção Sobre */
+.about-section {
+    background: white;
+    padding: 4rem 2rem;
+    border-radius: 15px;
+    margin: 3rem 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.collector-info {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.collector-avatar {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #000, #2d2d2d);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #ffd700;
+}
+
+.collector-details h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #2d2d2d;
+}
+
+.collector-details p {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.collector-quote {
+    font-style: italic;
+    color: #666;
+    border-left: 3px solid #ffd700;
+    padding-left: 1rem;
+    margin-top: 1rem;
+}
+
+/* Seção Contato */
+.contact-section {
+    background: white;
+    padding: 4rem 2rem;
+    border-radius: 15px;
+    margin: 3rem 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-card {
+    text-align: center;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+.contact-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.contact-card h3 {
+    margin-bottom: 1rem;
+    color: #2d2d2d;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    padding: 1rem 0;
+    color: #666;
+}
+
+.breadcrumb a {
+    color: #000;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* Detalhes da Carta */
+.card-detail-view {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin: 2rem 0;
+}
+
+.detail-image-section {
+    position: sticky;
+    top: 2rem;
+}
+
+.card-image-large {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.card-image-large img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, transparent 100%);
+}
+
+.card-category-large {
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-weight: bold;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.card-category-large.rara {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+}
+
+.card-category-large.classica {
+    background: linear-gradient(135deg, #4834d4, #686de0);
+}
+
+.card-category-large.promocional {
+    background: linear-gradient(135deg, #f0932b, #f9ca24);
+}
+
+.card-category-large.autografada {
+    background: linear-gradient(135deg, #6ab04c, #badc58);
+}
+
+.detail-content-section {
+    padding: 1rem 0;
+}
+
+.card-header {
+    margin-bottom: 2rem;
+}
+
+.card-header h1 {
+    font-size: 2.5rem;
+    color: #2d2d2d;
+    margin-bottom: 1rem;
+}
+
+.card-meta {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.card-rarity-large {
+    font-size: 1.3rem;
+}
+
+.card-value-large {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #27ae60;
+}
+
+.card-description-full,
+.card-stats,
+.card-history {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 15px;
+}
+
+.card-description-full h3,
+.card-stats h3,
+.card-history h3 {
+    margin-bottom: 1rem;
+    color: #2d2d2d;
+}
+
+.stats-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: white;
+    border-radius: 10px;
+    border-left: 4px solid orange;
+}
+
+.stat-label {
+    font-weight: bold;
+    color: #666;
+}
+
+.stat-value {
+    font-weight: bold;
+    color: #2d2d2d;
+}
+
+.history-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid darkorange;
+}
+
+.card-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.btn-interest {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    font-weight: bold;
+}
+
+.btn-interest:hover {
+    transform: translateY(-3px);
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 2px solid #000;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.btn-primary,
+.btn-secondary:hover {
+    background: #000;
+    color: white;
+}
+
+footer {
+    background: #2d2d2d;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
